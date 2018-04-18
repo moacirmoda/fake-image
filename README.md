@@ -2,20 +2,30 @@ Fake Image
 ==========
 
 Flask project that receive size as url parameters and returns a PNG image with 
-those sizes
+those sizes.
+
+How to use
+----------
+
+Access your domain with size as parameter. Example:
+```
+https://yourdomain.com/500x500
+``` 
+
+It will return an PNG image with those size.
 
 Run project
 -----------
-1. Create and activate an virtualenv with `python3`
-1. Install dependencies
+* Create and activate an virtualenv with `python3`
+* Install dependencies
 ```
 pip install requirements.txt
 ```
-1. Run tests
+* Run tests
 ```
 python tests.py
 ```
-1. Execute flask server
+* Execute flask server
 ```
 export FLASK_APP=app.py
 flask run
