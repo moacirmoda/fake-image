@@ -13,7 +13,7 @@ def create_fake_image(width, height, color='#ffffff', text=None):
 
     draw = ImageDraw.Draw(img)
     w, h = draw.textsize(text)
-    draw.text(((width - w)/2,(height - h)/2), text, fill="#000000")
+    draw.text(((width - w)/2,(height - h)/2), text, fill="#FF0000")
 
     return img
 
