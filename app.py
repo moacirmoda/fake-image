@@ -6,6 +6,8 @@ import os
 
 
 def create_fake_image(width, height, color='#ffffff', text=None):
+    width = width * 2
+
     if not text:
         text = "{}x{}".format(width, height)
     
@@ -13,7 +15,7 @@ def create_fake_image(width, height, color='#ffffff', text=None):
 
     draw = ImageDraw.Draw(img)
     w, h = draw.textsize(text)
-    draw.text(((width - w)/2,(height - h)/2), text, fill="#FF0000")
+    draw.text(((width - w)/2 , (height - h)/2), text, fill="#FFFF00")
 
     return img
 
