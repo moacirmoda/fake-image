@@ -4,16 +4,16 @@ from flask import send_file
 from io import BytesIO
 
 
-def create_fake_image(width, height, color='#000000', text=None):
+def create_fake_image(width, height, color='#ffffff', text=None):
     if not text:
         text = "{}x{}".format(width, height)
     
     img = Image.new('RGBA', (width, height), color)
-    
+
     draw = ImageDraw.Draw(img)
     w, h = draw.textsize(text)
-    draw.text(((width - w)/2,(height - h)/2), text, fill="#ffffff")
-    
+    draw.text(((width - w)/2,(height - h)/2), text, fill="#000000")
+
     return img
 
 
